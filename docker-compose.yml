@@ -1,0 +1,21 @@
+version: '3'
+
+# 使用外部网络
+# docker network create server_web-network
+networks:
+  server_web-network:
+    external: true
+
+services:
+  docker-chineseorc:
+    image: python:3.6
+    restart: always
+    tty: true
+    command: sh /data/init.sh
+    volumes:
+      - ./chineseorc:/data
+    ports:
+      - 8089:8089
+    networks:
+      - server_web-network
+

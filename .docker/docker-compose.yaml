@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  docker-python:
+    image: python:3.6
+    tty: true
+

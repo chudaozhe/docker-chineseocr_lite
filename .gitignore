@@ -1,0 +1,6 @@
+.DS_Store
+
+/.idea
+/.docker/
+!/.docker/docker-compose.yaml
+/chineseorc/chineseocr_lite
