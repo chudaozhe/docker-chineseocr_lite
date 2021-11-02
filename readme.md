@@ -36,6 +36,12 @@ mv 仿宋_GB2312.ttf fangsong_GB2312.ttf
 vi backend/webInterface/tr_run.py
    myfont = ImageFont.truetype("fangsong_GB2312.ttf", size=size)
    
+vi config.py
+   max_post_time = 100000000 # 单日ip 访问最大次数
+
+vi backend/main.py
+   port = 8089 # 端口
+
 # 关于Dockerfile
 官方提供的`Dockerfile`没有问题，编译`docker build -t my/chineseocr .`一下就能用
 但是，后来我发现用python的官方镜像+init.sh也是可以运行这个项目的，详见docker-compose.yml
